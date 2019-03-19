@@ -16,13 +16,16 @@ make install
 cd bin/ &&
 sudo sysctl -w vm.nr_hugepages=2 &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
-"cpu_threads_conf" :
-[
+"cpu_threads_conf" : [
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
-], 
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 4 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 6 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 8 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 10 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 12 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 14 }
+],
 "call_timeout" : 10,
 "retry_time" : 30,
 "giveup_limit" : 0,
