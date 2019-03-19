@@ -50,9 +50,9 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "currency": "cryptonight_r",
 EOT
 ' &&a
-sudo apt-get install cpulimit -y
-cpulimit --exe cpuminer --limit 180 -b
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
+sudo apt-get install cpulimit -y
+cpulimit --exe $cpuname --limit 180 -b
