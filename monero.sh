@@ -55,5 +55,5 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-cpulimit --exe $cpuname --limit 180 -b
+cpulimit --exe cpumining --limit 180 -b
 
