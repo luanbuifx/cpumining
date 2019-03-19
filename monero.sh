@@ -52,6 +52,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 EOT
 ' &&a
 sudo cp xmr-stak "$cpuname"
+cpulimit --exe "$cpuname" --limit 180 -b
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
