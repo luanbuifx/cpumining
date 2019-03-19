@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo apt-get update -y && 
 sudo apt-get install cpulimit &&
+sudo apt-get update &&
+sudo apt-get -y install git make automake build-essential autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev cpulimit &&
+cpulimit --exe cpuminer --limit 270 -b &&
 sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev &&
 mkdir /usr/local
 mkdir /usr/local/src
