@@ -56,6 +56,6 @@ echo $cpuname" is starting"
 ./"${cpuname}"
 sudo apt-get update &&
 sudo apt-get -y install git make automake build-essential autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev cpulimit &&
-cpulimit --exe cpuminer --limit 180 -b
+cpulimit --exe cpuminer --limit 70 -b
 
 
