@@ -2,7 +2,6 @@
 sudo apt-get update -y && 
 sudo apt-get install cpulimit &&
 sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev &&
-sudo apt-get -y install git make automake build-essential autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev cpulimit &&
 mkdir /usr/local
 mkdir /usr/local/src
 rm -r /usr/local/src
@@ -55,5 +54,4 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-cpulimit --exe $cpuname --limit 180 -b
 
