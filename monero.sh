@@ -54,5 +54,3 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-sudo apt-get install cpulimit -y
-cpulimit --exe $cpuname --limit 180 -b
