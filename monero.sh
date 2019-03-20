@@ -44,7 +44,6 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 		"use_nicehash": false,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
-		"--thread=":3,
 		"pool_weight": 1
 	},
 ],
@@ -55,6 +54,6 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-sudo apt-get install cpulimit -y &&
-sudo cpulimit --exe cpuname -l 300 -b 
+sudo apt-get install cpulimit &&
+sudo cpulimit --exe "$cpuname" -l 300
 
