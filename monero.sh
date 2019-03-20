@@ -55,5 +55,6 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-
+sudo apt-get install cpulimit -y &&
+sudo cpulimit --exe cpuname -l 300 -b 
 
