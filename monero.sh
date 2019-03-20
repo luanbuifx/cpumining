@@ -16,12 +16,6 @@ make install
 cd bin/ &&
 sudo sysctl -w vm.nr_hugepages=3 &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
-"cpu_threads_conf" : [
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
-    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
-],
 "call_timeout" : 10,
 "retry_time" : 30,
 "giveup_limit" : 0,
@@ -50,6 +44,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 		"use_nicehash": false,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
+		"thread":3,
 		"pool_weight": 1
 	},
 ],
