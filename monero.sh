@@ -44,7 +44,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 		"use_nicehash": false,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
-		"thread":3,
+		"--thread=":3,
 		"pool_weight": 1
 	},
 ],
