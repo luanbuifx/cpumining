@@ -15,7 +15,7 @@ cd build
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
 cd bin/ &&
-sudo sysctl -w vm.nr_hugepages=3 &&
+sudo sysctl -w vm.nr_hugepages=128 &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 "call_timeout" : 10,
 "retry_time" : 30,
