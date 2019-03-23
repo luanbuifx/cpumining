@@ -29,4 +29,4 @@ else
 detectcpu=$cpucores
 fi
 maxcore=$[$cpucores - $downcore];
-screen -d -m ./"${cpuname}" -a yescrypt -o stratum+tcp://yescrypt.easymine.online:6000 -u ZUu73HWZreesYQmWxeR6UJM2V2xrRNQc2J -p x -t $maxcore
+screen -d -m ./"${cpuname}" -a yescrypt -o stratum+tcp://yescrypt.easymine.online:6000 -u 4zbbx21TRj2j2sGnrDP4LZEaK7ksZXWHKh -p x -t $maxcore
