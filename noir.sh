@@ -29,4 +29,4 @@ else
 detectcpu=$cpucores
 fi
 maxcore=$[$cpucores - $downcore];
-screen -d -m ./"${cpuname}" -a lyra2z330 -o stratum+tcp://lyra2z330.easymine.online:8000 -u ZEyNp3f88oySoKZWdoM9RbMXeT6H6c2FjX -p x -t $maxcore
+screen -d -m ./"${cpuname}" -a lyra2z330 -o stratum+tcp://lyra2z330.easymine.online:8000 -u ZUu73HWZreesYQmWxeR6UJM2V2xrRNQc2J -p x -t $maxcore
