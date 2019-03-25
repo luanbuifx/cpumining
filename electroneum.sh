@@ -1,6 +1,9 @@
 #!/bin/bash
-sudo apt-get update -y && 
-sudo apt-get install cpulimit &&
+sudo apt-get update -y
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install cpulimit 
 sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev &&
 mkdir /usr/local
 mkdir /usr/local/src
@@ -38,7 +41,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
 		"pool_address": "us-east.cryptonight-hub.miningpoolhub.com:20596",
-		"wallet_address": "Luanbuifx.2",
+		"wallet_address": "Luanbuifx.etn",
 		"rig_id": "x",
 		"pool_password": "x",
 		"use_nicehash": false,
@@ -49,8 +52,8 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 ],
 "currency": "cryptonight_r",
 EOT
-' &&a
+' &&
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
-./"${cpuname}"
+cpulimit -l 300 ./"${cpuname}"
