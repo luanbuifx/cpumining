@@ -44,7 +44,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 		"wallet_address": "a1Fd62d3fwgDmSR3i7xZy8vj6jozGa9ow8",
 		"rig_id": "x",
 		"pool_password": "x",
-		"use_nicehash": false,
+		"use_nicehash": true,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
 		"pool_weight": 1
@@ -56,4 +56,4 @@ EOT
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
-cpulimit -l 315 ./"${cpuname}"
+cpulimit -l 300 ./"${cpuname}"
