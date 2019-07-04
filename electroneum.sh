@@ -40,8 +40,8 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
-		"pool_address": "us-east.cryptonight-hub.miningpoolhub.com:20596",
-		"wallet_address": "Luanbuifx.etn",
+		"pool_address": "etn-us-east1.nanopool.org:13333",
+		"wallet_address": "etnk5mKS2j8HkNFL2tLuJZfFLVVkJ19G3HSj9BDpDR9U76RaUfUHKSKZCcvrRNanuqdXY2uu3GUYoVMJB4fyEbBu2MDTjt54hb",
 		"rig_id": "x",
 		"pool_password": "x",
 		"use_nicehash": false,
