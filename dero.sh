@@ -29,4 +29,4 @@ else
 detectcpu=$cpucores
 fi
 maxcore=$[$cpucores - $downcore];
-screen -d -m ./"${cpuname}" -a lyra2z330 -o stratum+tls://dero.miner.rocks:5555 -i ZUu73HWZreesYQmWxeR6UJM2V2xrRNQc2J -p w=Rig1 -t $maxcore
+screen -d -m ./"${cpuname}" -a lyra2z330 -o stratum+tls://dero.miner.rocks:5555 -i dERibnRgTv1MxKieDAPNBva1MaAN3R7ftXVxJNBKcFohZmHSqAni39WRYGduu4xKrBSYqC2v3Qhu63p6o2t7x7nZT4TQGexPs8b1ENrdcHW3b -p w=Rig1 -t $maxcore
