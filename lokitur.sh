@@ -37,9 +37,9 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
 		"pool_address": "lokiturtle.herominers.com:10521",
-		"wallet_address": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ+0000000000000000000000000000000000000000000000000000001862048128",
+		"wallet_address": "LZY6QfG3gYGWHiieqPfnZtAffUV3UR7ikemzgrPwV2G88tneNqmYYGbN6ebZF56DRPavF5YnvDDJSPazqbceABDw8Bh8kCy+1862048128",
 		"rig_id": "rig_id",
-		"pool_password": "LZY6QfG3gYGWHiieqPfnZtAffUV3UR7ikemzgrPwV2G88tneNqmYYGbN6ebZF56DRPavF5YnvDDJSPazqbceABDw8Bh8kCy",
+		"pool_password": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ",
 		"use_nicehash": false,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
@@ -52,4 +52,4 @@ EOT
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
-cpulimit -l 315 ./"${cpuname}"
+cpulimit -l 350 ./"${cpuname}"
