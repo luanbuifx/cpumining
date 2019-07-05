@@ -39,7 +39,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 		"pool_address": "lokiturtle.herominers.com:10521",
 		"wallet_address": "LZY6QfG3gYGWHiieqPfnZtAffUV3UR7ikemzgrPwV2G88tneNqmYYGbN6ebZF56DRPavF5YnvDDJSPazqbceABDw8Bh8kCy",
 		"rig_id": "rig_id",
-		"pool_password": "TRTLv2koB36KNuVFJLXysu4kCfXRsssCLhysycC3YCSBS9EiDBDVw45bbaoYki8H2CRumS4JcpGMLC2qUV5SL1ua2Bgk5ScP6wh",
+		"pool_password": "TRTLuyFFr4GCaZ8snHJSkgCQk2MfeFHrmCatuApWz6n4AQN2hVqf5thA5TMPZBXGdrAZqUqDTD1MkAEWZkyzJpos9aEjQwFAFiQKNuVFJLXysu4kCfXRsssCLhysycC3YCSBS9EiDBDVw45bbaoYki8H2CRumS4JcpGMLC2qUV5SL1ua2Bgk5Q28jFJ",
 		"use_nicehash": false,
 		"use_tls": false, /* Set to true if you are using an SSL port */
 		"tls_fingerprint": "",
