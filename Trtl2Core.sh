@@ -37,7 +37,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
 		"pool_address": "trtl.pool.mine2gether.com:3335",
-		"wallet_address": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ+0000000000000000000000000000000000000000000000000000001862048128",
+		"wallet_address": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ.0000000000000000000000000000000000000000000000000000001862048128",
 		"rig_id": "",
 		"pool_password": "w=Worker1;pass=Luan777",
 		"use_nicehash": false,
