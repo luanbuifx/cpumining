@@ -36,7 +36,7 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
-		"pool_address": "loki.pool.mine2gether.com:2221",
+		"pool_address": "loki.pool.mine2gether.com:3331",
 		"wallet_address": "LZY6QfG3gYGWHiieqPfnZtAffUV3UR7ikemzgrPwV2G88tneNqmYYGbN6ebZF56DRPavF5YnvDDJSPazqbceABDw8Bh8kCy:TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ.0000000000000000000000000000000000000000000000000000001862048128",
 		"rig_id": "rig_id",
 		"pool_password": "w=Worker1;pass=Luan777",
