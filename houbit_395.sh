@@ -37,7 +37,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
 		"pool_address": "arq.pool.mine2gether.com:3336",
-		"wallet_address": "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o:TRTLuwtnToN4Hn8Mgdh5B7c24CLvU72z64kMwYv5dXVCNZiQAc6769f9LYZxmGNzGPPYvGoCQ8Ke1ZXB49X1tQGCJKaoAANtE4D",
+		"wallet_address": "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o:TRTLuxs14tzAGHsLtG1S2P9uLPi7wsPK6HRfUrvEsb1SAQFpB9rr51UAS9JnJBPGtTHG3CoxmRYzEA4vs7BqgcVM9bbiqN95zobKR5ZkgmLwhsTxvLcSjcaRzaedbehnFveLPUCHbsyysCTNYJwkbFLJcySUfNJSYzD67Yg6RZrLFZV1TwQV9PQYWUM",
 		"rig_id": "rig_id",
 		"pool_password": "w=Worker1;pass=Luan777",
 		"use_nicehash": false,
