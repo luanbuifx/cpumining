@@ -34,19 +34,13 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 EOT
 ' &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
-"pool_list": [
-    {
-        "pool_address": "mine.arqma.com:3333",
-        "wallet_address": "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o",
-        "rig_id": "Jack",
-        "pool_password": "x",
-        "use_nicehash": false,
-        "use_tls": false, /* Set to true if you are using an SSL port */
-        "tls_fingerprint": "",
-        "pool_weight": 1
-    },
+"pool_list" :
+[
+{"pool_address" : "arqma.herominers.com:10641", "wallet_address" : "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o", "rig_id" : "", "pool_password" : "ir2btddJ78sicpKntYo3oRMLQh91VktzBfZzWbhwZnQxS815QLiG5WCAH9sgVGC5uwLZuMJCwW5CdFigNbJ3WTxU2CG5GnUDe.2baeccedd170c285d37e4db5c1b162f0405fad3e54af8cc95c6a0317734a13ad", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
 ],
-"currency": "cryptonight_turtle",
+
+"currency" : "cryptonight_turtle",
+
 EOT
 ' &&
 sudo cp xmr-stak "$cpuname"
