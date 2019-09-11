@@ -36,8 +36,8 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list": [
 	{
-		"pool_address": "arq.pool.mine2gether.com:3336",
-		"wallet_address": "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o:TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ.0000000000000000000000000000000000000000000000000000001862048128",
+		"pool_address": "trtl.pool.mine2gether.com",
+		"wallet_address": "TRTLv2xgnXYJBqb7BuX2MwFZg42hfNDxrK9Y7kjZBNHuZRM17sJSEvQQK8BDhb3Nra48dvXydwZEjA7gWKNwLRJpE7Rw4DXjQqJ.0000000000000000000000000000000000000000000000000000001862048128",
 		"rig_id": "rig_id",
 		"pool_password": "w=Worker1;pass=Luan777",
 		"use_nicehash": false,
