@@ -36,10 +36,9 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list" :
 [
-{"pool_address" : "arqma.herominers.com:10641", "wallet_address" : "aRi1cDd6LkAcc1p6W58dkPi8xSfbZ5EuYFrHxwH3py1MQ9rFrzmSaghguD4GGpCfHSMmKXWJrd4e5CkabC3viWJKfHuDSTwte7P8zxhE4cZ7o", "rig_id" : "", "pool_password" : "ir2btddJ78sicpKntYo3oRMLQh91VktzBfZzWbhwZnQxS815QLiG5WCAH9sgVGC5uwLZuMJCwW5CdFigNbJ3WTxU2CG5GnUDe+2baeccedd170c285d37e4db5c1b162f0405fad3e54af8cc95c6a0317734a13ad", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
+{"pool_address" : "conceal.herominers.com:10361", "wallet_address" : "ccx7aoNYpGb7sndJtEDWvCBQhPAy9mC8QW5KWuCx8J1FJrDcDrER1XYA9LGtggrR7ZC4KfQmQ2uRN47L9WypBbNLAeq2Q4Q9WN+bea478d936f707d8ad1d9afa7ac9f610f880658e05461b25ea126f702cfb1c9a", "rig_id" : "", "pool_password" : "SuperMan", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
 ],
-"currency" : "cryptonight_turtle",
-
+"currency" : "cryptonight_conceal",
 EOT
 ' &&
 sudo cp xmr-stak "$cpuname"
