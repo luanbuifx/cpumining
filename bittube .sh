@@ -36,9 +36,9 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list" :
 [
-	{"pool_address" : "bittube.miner.rocks:5555", "wallet_address" : "bi1b95WYJRES7oBrvRo2eQV53ExLzFAzjKVM4wp9H9B6irCR6UuQxHf183XsJwemdoQm5PUHhQVwS67Hf5yUE7qg4SwbdmLusFV5LhT7vULQD", "rig_id" : "", "pool_password" : "w=Rig1", "use_nicehash" : false, "use_tls" : true, "tls_fingerprint" : "", "pool_weight" : 100 },
-	{"pool_address" : "bittube.miner.rocks:7777", "wallet_address" : "bi1b95WYJRES7oBrvRo2eQV53ExLzFAzjKVM4wp9H9B6irCR6UuQxHf183XsJwemdoQm5PUHhQVwS67Hf5yUE7qg4SwbdmLusFV5LhT7vULQD", "rig_id" : "", "pool_password" : "w=Rig1", "use_nicehash" : false, "use_tls" : true, "tls_fingerprint" : "", "pool_weight" : 1 },
+{"pool_address" : "tube.herominers.com:10281", "wallet_address" : "bi1b95WYJRES7oBrvRo2eQV53ExLzFAzjKVM4wp9H9B6irCR6UuQxHf183XsJwemdoQm5PUHhQVwS67Hf5yUE7qg4SwbdmLusFV5LhT7vULQD", "rig_id" : "", "pool_password" : "xMan", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
 ],
+
 "currency" : "bittube",
 
 EOT
