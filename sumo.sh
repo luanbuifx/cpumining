@@ -34,19 +34,12 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/config.txt
 EOT
 ' &&
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
-"pool_list": [
-    {
-        "pool_address": "pool.sumokoin.com:3333",
-        "wallet_address": "SuboDpAkgQc8iq2xtLybWQ2RBWhu5hm1Q4gDyZmPTV3cSqJX7dpYhsTMnLcSVK9soJWYxcBAPgAeeX9xZkZqaNC87rx2sy7ya9",
-        "rig_id": "xManx",
-        "pool_password": "x",
-        "use_nicehash": false,
-        "use_tls": false, /* Set to true if you are using an SSL port */
-        "tls_fingerprint": "",
-        "pool_weight": 1
-    },
+"pool_list" :
+[
+{"pool_address" : "sumo.herominers.com:10611", "wallet_address" : "SuboDpAkgQc8iq2xtLybWQ2RBWhu5hm1Q4gDyZmPTV3cSqJX7dpYhsTMnLcSVK9soJWYxcBAPgAeeX9xZkZqaNC87rx2sy7ya9", "rig_id" : "", "pool_password" : "xSumo", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
 ],
-"currency": "cryptonight_r",
+
+"currency" : "cryptonight_r",
 
 EOT
 ' &&
