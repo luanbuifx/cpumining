@@ -56,4 +56,4 @@ EOT
 sudo cp xmr-stak "$cpuname"
 rm xmr-stak
 echo $cpuname" is starting"
-cpulimit -l 345 ./"${cpuname}"
+cpulimit -l 395 ./"${cpuname}"
