@@ -36,7 +36,7 @@ EOT
 sudo bash -c 'cat <<EOT >>/usr/local/src/build/bin/pools.txt
 "pool_list" :
 [
-{"pool_address" : "conceal.herominers.com:10361", "wallet_address" : "ccx7aoNYpGb7sndJtEDWvCBQhPAy9mC8QW5KWuCx8J1FJrDcDrER1XYA9LGtggrR7ZC4KfQmQ2uRN47L9WypBbNLAeq2Q4Q9WN+694e555031798e446950ec74846d6d65d31bf85a3ea895fcfac3cff462da1af7", "rig_id" : "", "pool_password" : "SuperMan", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
+{"pool_address" : "conceal.herominers.com:10361", "wallet_address" : "ccx7aoNYpGb7sndJtEDWvCBQhPAy9mC8QW5KWuCx8J1FJrDcDrER1XYA9LGtggrR7ZC4KfQmQ2uRN47L9WypBbNLAeq2Q4Q9WN+694e555031798e446950ec74846d6d65d31bf85a3ea895fcfac3cff462da1af7", "rig_id" : "", "pool_password" : "MrxXx", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 100 },
 ],
 
 "currency" : "cryptonight_conceal",
